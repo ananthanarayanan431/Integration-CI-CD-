@@ -30,6 +30,5 @@ jobs:
           cat metrics.txt >> report.md
           echo "## Model Performance" >> report.md
           echo "Model performance metrics are on the plot below." >> report.md
-          echo '![](./residuals.png "Confusion Matrix")' >> report.md
-          echo '![](./residuals.png "Confusion Matrix")' >> report.md
+          cml-publish residuals.png --md >> report.md
           cml comment create report.md
